@@ -1,0 +1,13 @@
+[project]
+name = "ComfyUI_XLweb"
+description = "An elegant web frontend for ComfyUI that simplifies complex node workflows."
+version = "1.0.1"
+license = { file = "LICENSE" }
+
+[project.urls]
+Repository = "https://github.com/853587221/ComfyUI_XLweb"
+
+[tool.comfy]
+PublisherId = "lxl853587221"
+DisplayName = "ComfyUI_XLweb"
+Icon = ""
