@@ -1,0 +1,169 @@
+{
+  "name": "繁體中文",
+  "nativeName": "繁體中文",
+  "translations": {
+    "title": "ComfyUI_XLWEB",
+    "subtitle": "AI模型可視化工作流編輯器",
+    "pageDescription": "探索無限创意的AI工作流",
+    "search": {
+      "placeholder": "搜尋工作流...",
+      "clear": "清除搜尋"
+    },
+    "workflow": {
+      "title": "工作流",
+      "description": "描述",
+      "noDescription": "暫無描述",
+      "loading": "載入中...",
+      "loadFailed": "載入工作流失敗",
+      "downloadWorkflow": "下載工作流",
+      "apply": "應用工作流",
+      "download": "下載工作流"
+    },
+    "settings": {
+      "title": "系統設定",
+      "server": {
+        "title": "伺服器設定",
+        "ipLabel": "ComfyUI 伺服器 IP 地址",
+        "ipPlaceholder": "支援多種格式: localhost:8188 或 http://192.168.1.100:8188 或 https://example.com/ 或 [::1]:8188 或 2001:db8::1",
+        "testConnection": "測試連線",
+        "supportedFormats": "支援ipv6和域名輸入",
+        "serverAddressSupport": "伺服器地址支援IPv6和域名！點擊\"測試連接\"驗證，一次設置永久生效。"
+      },
+      "upload": {
+        "title": "檔案上傳限制",
+        "imageLabel": "圖像檔案大小限制 (MB)",
+        "imageHint": "單個圖像檔案的最大大小，單位：MB",
+        "videoLabel": "影片檔案大小限制 (MB)",
+        "videoHint": "單個影片檔案的最大大小，單位：MB",
+        "audioLabel": "音訊檔案大小限制 (MB)",
+        "audioHint": "單個音訊檔案的最大大小，單位：MB"
+      },
+      "theme": {
+        "title": "主題設置",
+        "defaultLabel": "預設主題",
+        "defaultHint": "選擇頁面載入時的預設主題風格",
+        "currentLabel": "目前主題",
+        "dark": "暗色",
+        "light": "亮色",
+        "darkTheme": "暗色主題",
+        "lightTheme": "亮色主題"
+      },
+      "language": {
+        "title": "語言設定",
+        "label": "介面語言",
+        "hint": "選擇介面顯示語言，重新啟動後生效",
+        "auto": "跟隨系統語言"
+      },
+      "buttons": {
+        "save": "儲存設定",
+        "reset": "重設預設",
+        "cancel": "取消"
+      }
+    },
+    "interface": {
+      "backHome": "返回主頁",
+      "disconnected": "未連接",
+      "connected": "已連接",
+      "paramAdjustment": "參數調整",
+      "positivePrompt": "正面提示詞",
+      "negativePrompt": "反面提示詞",
+      "positivePromptPlaceholder": "輸入正面提示詞...",
+      "negativePromptPlaceholder": "輸入反面提示詞...",
+      "randomSeed": "隨機種子",
+      "enableRandomSeed": "啟用隨機種子",
+      "currentSeedValue": "目前種子值:",
+      "generateContent": "生成內容",
+      "waitingGenerate": "等待生成...",
+      "preparing": "準備中...",
+      "generationHistory": "生成歷史",
+      "clearHistory": "清除歷史",
+      "processing": "正在處理...",
+      "imageUpload": "圖像上傳",
+      "videoUpload": "視頻上傳",
+      "audioUpload": "音頻上傳",
+      "serverAddressUpdated": "伺服器地址已更新為:",
+      "processing": "正在處理",
+      "executing": "正在執行:",
+      "executingNode": "正在執行節點:",
+      "usingCachedResult": "使用快取結果",
+      "startExecutingWorkflow": "開始執行工作流",
+      "gettingResults": "獲取結果...",
+      "taskCompleted": "任務完成，但未找到結果",
+      "getResultsFailed": "獲取結果失敗",
+      "executingYourTask": "正在執行您的任務",
+      "waitingInQueue": "排隊等待中 - 第",
+      "position": "位",
+      "checkingTaskStatus": "檢查任務狀態中...",
+      "running": "運行中",
+      "waiting": "等待中",
+      "totalTasks": "總任務",
+      "tasksAhead": "前面還有",
+      "tasks": "個任務"
+    },
+     "upload": {
+       "title": "檔案上傳",
+       "selectFile": "選擇檔案",
+      "generate": "產生",
+      "clearHistory": "清除歷史",
+      "connecting": "連線中...",
+      "connected": "已連線",
+      "disconnected": "連線中斷",
+      "prompts": {
+        "positive": "正面提示詞",
+        "negative": "負面提示詞",
+        "positivePlaceholder": "請輸入正面提示詞...",
+        "negativePlaceholder": "請輸入負面提示詞..."
+      },
+      "seed": {
+        "random": "隨機種子",
+        "current": "目前種子"
+      },
+      "upload": {
+        "image": "上傳圖像",
+        "video": "上傳影片",
+        "audio": "上傳音訊",
+        "dragDrop": "拖拽檔案到此處或點擊上傳",
+        "fileSelected": "已選擇檔案",
+        "uploading": "上傳中...",
+        "uploaded": "上傳完成"
+      },
+      "progress": {
+        "generating": "正在產生...",
+        "progress": "進度",
+        "executing": "正在執行",
+        "queue": "佇列狀態",
+        "complete": "產生完成"
+      },
+      "history": {
+        "title": "歷史記錄",
+        "empty": "暫無歷史記錄",
+        "loading": "載入歷史記錄...",
+        "preview": "預覽",
+        "download": "下載"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "連線成功！伺服器回應正常",
+      "connectionFailed": "連線失敗",
+      "connectionTimeout": "連線逾時：請檢查伺服器地址是否正確",
+      "settingsSaved": "設定已儲存",
+      "settingsReset": "設定已重設為預設值",
+      "serverUpdated": "伺服器地址已更新",
+      "languageUpdated": "語言設定已更新",
+      "generateSuccess": "產生成功",
+      "generateFailed": "產生失敗",
+      "uploadSuccess": "上傳成功",
+      "uploadFailed": "上傳失敗",
+      "invalidInput": "輸入無效",
+      "pleaseEnterValidAddress": "請輸入有效的伺服器地址"
+    },
+    "errors": {
+      "networkError": "網路錯誤",
+      "serverError": "伺服器錯誤",
+      "timeout": "請求逾時",
+      "unknown": "未知錯誤",
+      "fileTooBig": "檔案過大",
+      "unsupportedFormat": "不支援的檔案格式"
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "name": "English",
+  "nativeName": "English",
+  "translations": {
+    "title": "ComfyUI_XLWEB",
+    "subtitle": "AI Model Visual Workflow Editor",
+    "pageDescription": "Explore Unlimited AI Workflows",
+    "search": {
+      "placeholder": "Search workflows...",
+      "clear": "Clear search"
+    },
+    "workflow": {
+      "title": "Workflows",
+      "description": "Description",
+      "noDescription": "No description available",
+      "loading": "Loading...",
+      "loadFailed": "Failed to load workflow",
+      "downloadWorkflow": "Download Workflow",
+      "apply": "Apply Workflow",
+      "download": "Download Workflow"
+    },
+    "settings": {
+      "title": "System Settings",
+      "server": {
+        "title": "Server Settings",
+        "ipLabel": "ComfyUI Server IP Address",
+        "ipPlaceholder": "Supports multiple formats: localhost:8188 or http://192.168.1.100:8188 or https://example.com/ or [::1]:8188 or 2001:db8::1",
+        "testConnection": "Test Connection",
+        "supportedFormats": "Supports IPv6 and domain input",
+        "serverAddressSupport": "Server address supports IPv6 and domains! Click \"Test Connection\" to verify, set once for permanent use."
+      },
+      "upload": {
+        "title": "File Upload Limits",
+        "imageLabel": "Image File Size Limit (MB)",
+        "imageHint": "Maximum size for a single image file in MB",
+        "videoLabel": "Video File Size Limit (MB)",
+        "videoHint": "Maximum size for a single video file in MB",
+        "audioLabel": "Audio File Size Limit (MB)",
+        "audioHint": "Maximum size for a single audio file in MB"
+      },
+      "theme": {
+        "title": "Theme Settings",
+        "defaultLabel": "Default Theme",
+        "defaultHint": "Choose the default theme style when the page loads",
+        "currentLabel": "Current Theme",
+        "dark": "Dark",
+        "light": "Light",
+        "darkTheme": "Dark Theme",
+        "lightTheme": "Light Theme"
+      },
+      "language": {
+        "title": "Language Settings",
+        "label": "Interface Language",
+        "hint": "Select interface display language, takes effect after restart",
+        "auto": "Follow System Language"
+      },
+      "buttons": {
+        "save": "Save Settings",
+        "reset": "Reset Default",
+        "cancel": "Cancel"
+      }
+    },
+    "interface": {
+      "backHome": "Back to Home",
+      "disconnected": "Disconnected",
+      "connected": "Connected",
+      "paramAdjustment": "Parameter Adjustment",
+      "positivePrompt": "Positive Prompt",
+      "negativePrompt": "Negative Prompt",
+      "positivePromptPlaceholder": "Enter positive prompt...",
+      "negativePromptPlaceholder": "Enter negative prompt...",
+      "randomSeed": "Random Seed",
+      "enableRandomSeed": "Enable Random Seed",
+      "currentSeedValue": "Current Seed Value:",
+      "generateContent": "Generate Content",
+      "waitingGenerate": "Waiting to generate...",
+      "preparing": "Preparing...",
+      "generationHistory": "Generation History",
+      "clearHistory": "Clear History",
+      "processing": "Processing...",
+      "imageUpload": "Image Upload",
+      "videoUpload": "Video Upload",
+      "audioUpload": "Audio Upload",
+      "serverAddressUpdated": "Server address updated to:",
+      "processing": "Processing",
+      "executing": "Executing:",
+      "executingNode": "Executing node:",
+      "usingCachedResult": "Using cached result",
+      "startExecutingWorkflow": "Starting workflow execution",
+      "gettingResults": "Getting results...",
+      "completed": "Completed",
+      "taskCompleted": "Task completed but no results found",
+      "getResultsFailed": "Failed to get results",
+      "executingYourTask": "Executing your task",
+      "waitingInQueue": "Waiting in queue - Position",
+      "position": "",
+      "checkingTaskStatus": "Checking task status...",
+      "running": "running",
+      "waiting": "waiting",
+      "totalTasks": "total tasks",
+      "tasksAhead": "tasks ahead",
+      "tasks": "tasks"
+    },
+     "upload": {
+       "title": "File Upload",
+       "selectFile": "Select File",
+      "generate": "Generate",
+      "clearHistory": "Clear History",
+      "connecting": "Connecting...",
+      "connected": "Connected",
+      "disconnected": "Disconnected",
+      "prompts": {
+        "positive": "Positive Prompt",
+        "negative": "Negative Prompt",
+        "positivePlaceholder": "Enter positive prompt...",
+        "negativePlaceholder": "Enter negative prompt..."
+      },
+      "seed": {
+        "random": "Random Seed",
+        "current": "Current Seed"
+      },
+      "upload": {
+        "image": "Upload Image",
+        "video": "Upload Video",
+        "audio": "Upload Audio",
+        "dragDrop": "Drag and drop files here or click to upload",
+        "fileSelected": "File selected",
+        "uploading": "Uploading...",
+        "uploaded": "Upload complete"
+      },
+      "progress": {
+        "generating": "Generating...",
+        "progress": "Progress",
+        "executing": "Executing",
+        "queue": "Queue Status",
+        "complete": "Generation Complete"
+      },
+      "history": {
+        "title": "History",
+        "empty": "No history records",
+        "loading": "Loading history...",
+        "preview": "Preview",
+        "download": "Download"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "Connection successful! Server responding normally",
+      "connectionFailed": "Connection failed",
+      "connectionTimeout": "Connection timeout: Please check if server address is correct",
+      "settingsSaved": "Settings saved",
+      "settingsReset": "Settings reset to default",
+      "serverUpdated": "Server address updated",
+      "languageUpdated": "Language settings updated",
+      "generateSuccess": "Generation successful",
+      "generateFailed": "Generation failed",
+      "uploadSuccess": "Upload successful",
+      "uploadFailed": "Upload failed",
+      "invalidInput": "Invalid input",
+      "pleaseEnterValidAddress": "Please enter a valid server address"
+    },
+    "errors": {
+      "networkError": "Network error",
+      "serverError": "Server error",
+      "timeout": "Request timeout",
+      "unknown": "Unknown error",
+      "fileTooBig": "File too large",
+      "unsupportedFormat": "Unsupported file format"
+    }
+  }
+}

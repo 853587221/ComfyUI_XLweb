@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfyUI 工作流界面</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="interface-styles.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <!-- 顶部导航 -->
+        <header class="header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="interface.backHome">返回主页</span>
+            </button>
+            <div class="header-top">
+                <h1>ComfyUI_XLWEB</h1>
+            </div>
+            <div class="status-indicator">
+                <span id="connection-status" class="status offline" data-i18n="interface.disconnected">未连接</span>
+            </div>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main class="main-content">
+            <!-- 左侧参数调整模块 -->
+            <aside class="params-panel">
+                <div class="panel-header">
+                    <h2 data-i18n="interface.paramAdjustment">参数调整</h2>
+                </div>
+                
+                <div class="params-content">
+                
+                <!-- 提示词模块 -->
+                <div class="param-group" id="prompt-group">
+                    <div class="param-item">
+                        <label for="positive-prompt" data-i18n="interface.positivePrompt">正面提示词</label>
+                        <textarea id="positive-prompt" data-i18n-placeholder="interface.positivePromptPlaceholder" placeholder="输入正面提示词..."></textarea>
+                    </div>
+                    <div class="param-item">
+                        <label for="negative-prompt" data-i18n="interface.negativePrompt">反面提示词</label>
+                        <textarea id="negative-prompt" data-i18n-placeholder="interface.negativePromptPlaceholder" placeholder="输入反面提示词..."></textarea>
+                    </div>
+                </div>
+
+                <!-- 随机种子模块 -->
+                <div class="param-group" id="seed-group">
+                    <div class="param-item">
+                        <label for="random-seed" data-i18n="interface.randomSeed">随机种子</label>
+                        <div class="seed-control">
+                            <label class="switch">
+                                <input type="checkbox" id="random-seed" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="seed-label" data-i18n="interface.enableRandomSeed">启用随机种子</span>
+                        </div>
+                        <div class="seed-value-display" id="seed-value-display" style="display: none;">
+                            <span class="seed-value-label" data-i18n="interface.currentSeedValue">当前种子值:</span>
+                            <span class="seed-value" id="current-seed-value">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 生成按钮模块（常驻显示） -->
+                <div class="param-group" id="generate-group">
+                    <div class="param-item generate-item">
+                        <button class="generate-btn" id="generate-btn" onclick="generateContent()">
+                            <i class="fas fa-play"></i>
+                            <span data-i18n="interface.generateContent">生成内容</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 文件上传模块 -->
+                <div class="param-group" id="upload-group" style="display: none;">
+                    <!-- 图像上传 -->
+                    <div class="upload-section" id="image-uploads">
+                        <!-- 动态生成的图像上传组件 -->
+                    </div>
+                    
+                    <!-- 视频上传 -->
+                    <div class="upload-section" id="video-uploads">
+                        <!-- 动态生成的视频上传组件 -->
+                    </div>
+                    
+                    <!-- 音频上传 -->
+                    <div class="upload-section" id="audio-uploads">
+                        <!-- 动态生成的音频上传组件 -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右侧生成结果模块 -->
+            <section class="results-panel">
+                <div class="panel-header">
+                    <h2>生成结果</h2>
+                    <div class="result-controls">
+                        <button class="control-btn" id="refresh-btn" onclick="refreshResults()" title="刷新结果">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                        <button class="control-btn" id="clear-results-btn" onclick="clearResults()" title="清除结果">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <button class="control-btn" id="download-all-btn" onclick="downloadAllResults()" title="下载全部">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 进度状态 -->
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span id="progress-text" data-i18n="interface.waitingGenerate">等待生成...</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-details" id="progress-details">
+                        <span class="progress-step" id="current-step" data-i18n="interface.preparing">准备中...</span>
+                        <span class="progress-time" id="elapsed-time">00:00</span>
+                    </div>
+                </div>
+
+                <!-- 结果展示区域 -->
+                <div class="results-display">
+
+
+                    <!-- 统一结果显示区域 -->
+                    <div class="unified-results" id="unified-results">
+                        <!-- 所有媒体文件将在这里居中显示 -->
+                    </div>
+
+                    <!-- 结果详情面板 -->
+                    <div class="result-details" id="result-details">
+                        <div class="details-header">
+                            <h4>生成详情</h4>
+                            <button class="close-details" onclick="closeResultDetails()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="details-content" id="details-content">
+                            <!-- 详情内容将在这里显示 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部历史记录模块 -->
+        <footer class="history-panel">
+            <div class="panel-header">
+                <h2 data-i18n="interface.generationHistory">生成历史</h2>
+                <button class="clear-history-btn" onclick="clearHistory()">
+                    <i class="fas fa-trash"></i>
+                    <span data-i18n="interface.clearHistory">清除历史</span>
+                </button>
+            </div>
+            <div class="history-content">
+                <div class="history-grid" id="history-grid">
+                    <!-- 历史记录将在这里显示 -->
+                </div>
+            </div>
+        </footer>
+        
+        <!-- GitHub页脚 -->
+        <div class="main-footer">
+            <a href="https://github.com/853587221/ComfyUI_XLweb" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <span class="license">Apache-2.0 许可证</span>
+        </div>
+    </div>
+
+    <!-- 加载遮罩 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p data-i18n="interface.processing">正在处理...</p>
+        </div>
+    </div>
+
+    <!-- 设置模态框 -->
+    <div class="settings-modal" id="settings-modal">
+        <div class="settings-overlay" onclick="closeSettings()"></div>
+        <div class="settings-content">
+            <div class="settings-header">
+                <h3><i class="fas fa-cog"></i> 系统设置</h3>
+                <button class="close-btn" onclick="closeSettings()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="settings-body">
+                <!-- 服务器设置 -->
+                <div class="setting-group">
+                    <h4><i class="fas fa-server"></i> 服务器设置</h4>
+                    <div class="setting-item">
+                        <label for="server-ip">ComfyUI 服务器 IP 地址</label>
+                        <div style="display: flex; gap: 8px;">
+                            <input type="text" id="server-ip" value="localhost:8188" placeholder="支持多种格式: localhost:8188 或 http://192.168.1.100:8188 或 https://server.com/ 或 [::1]:8188 或 2001:db8::1" style="flex: 1;">
+                            <button type="button" onclick="testServerConnection()" style="padding: 12px 16px; background: var(--primary-color); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.875rem; white-space: nowrap;">
+                                <i class="fas fa-plug"></i> 测试连接
+                            </button>
+                        </div>
+                        <small>支持格式：1) HTTP/HTTPS完整URL 2) IP/域名:端口 3) IPv6地址[::1]:8188 4) 纯域名example.com 5) 纯IPv6地址2001:db8::1。设置一次，永久生效。</small>
+                    </div>
+                </div>
+
+                <!-- 文件上传设置 -->
+                <div class="setting-group">
+                    <h4><i class="fas fa-upload"></i> 文件上传限制</h4>
+                    <div class="setting-item">
+                        <label for="image-size-limit">图像文件大小限制 (MB)</label>
+                        <input type="number" id="image-size-limit" value="10" min="1" max="100" step="1">
+                        <small>单个图像文件的最大大小，单位：MB</small>
+                    </div>
+                    <div class="setting-item">
+                        <label for="video-size-limit">视频文件大小限制 (MB)</label>
+                        <input type="number" id="video-size-limit" value="100" min="1" max="1000" step="1">
+                        <small>单个视频文件的最大大小，单位：MB</small>
+                    </div>
+                    <div class="setting-item">
+                        <label for="audio-size-limit">音频文件大小限制 (MB)</label>
+                        <input type="number" id="audio-size-limit" value="50" min="1" max="500" step="1">
+                        <small>单个音频文件的最大大小，单位：MB</small>
+                    </div>
+                </div>
+
+                <!-- 主题设置 -->
+                <div class="setting-group">
+                    <h4><i class="fas fa-palette"></i> 主题设置</h4>
+                    <div class="setting-item">
+                        <label for="default-theme">默认主题</label>
+                        <select id="default-theme">
+                            <option value="dark">暗色主题</option>
+                            <option value="light">亮色主题</option>
+                        </select>
+                        <small>选择页面加载时的默认主题风格</small>
+                    </div>
+                    <div class="setting-item">
+                        <label>当前主题</label>
+                        <div class="theme-switcher">
+                            <button class="theme-btn active" id="dark-theme-btn" onclick="switchTheme('dark')">
+                                <i class="fas fa-moon"></i> 暗色
+                            </button>
+                            <button class="theme-btn" id="light-theme-btn" onclick="switchTheme('light')">
+                                <i class="fas fa-sun"></i> 亮色
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 语言设置 -->
+                <div class="setting-group">
+                    <h4><i class="fas fa-language"></i> 语言设置</h4>
+                    <div class="setting-item">
+                        <label for="language-select">界面语言</label>
+                        <select id="language-select">
+                            <option value="auto">跟随系统语言</option>
+                            <option value="zh-CN">简体中文</option>
+                            <option value="zh-TW">繁體中文</option>
+                            <option value="en">英文 (English)</option>
+                            <option value="ja">日文 (日本語)</option>
+                            <option value="ko">韩文 (한국어)</option>
+                            <option value="fr">法语 (Français)</option>
+                            <option value="de">德语 (Deutsch)</option>
+                            <option value="ar">阿拉伯文 (العربية)</option>
+                            <option value="ru">俄语 (Русский)</option>
+                            <option value="hi">印度语 (हिन्दी)</option>
+                            <option value="es">西班牙语 (Español)</option>
+                        </select>
+                        <small>选择界面显示语言，重启后生效</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-footer">
+                <button class="settings-save-btn" onclick="saveSettings()">
+                    <i class="fas fa-save"></i> 保存设置
+                </button>
+                <button class="settings-reset-btn" onclick="resetSettings()">
+                    <i class="fas fa-undo"></i> 重置默认
+                </button>
+                <button class="settings-cancel-btn" onclick="closeSettings()">
+                    <i class="fas fa-times"></i> 取消
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文件预览模态框 -->
+    <div class="file-preview-modal" id="file-preview-modal">
+        <div class="file-preview-content" id="file-preview-content">
+            <button class="file-preview-close" onclick="closeFilePreview()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="file-preview-media"></div>
+            <div class="file-preview-info" id="file-preview-info"></div>
+            <div class="file-preview-controls" id="file-preview-controls">
+                <a class="file-preview-btn" id="file-preview-download" href="#" target="_blank">
+                    <i class="fas fa-download"></i> 下载文件
+                </a>
+                <button class="file-preview-btn" onclick="openInNewTab()">
+                    <i class="fas fa-external-link-alt"></i> 在新标签页中打开
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="interface-script.js"></script>
+</body>
+</html>

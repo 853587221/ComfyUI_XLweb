@@ -1,0 +1,168 @@
+{
+  "name": "हिन्दी",
+  "nativeName": "हिन्दी",
+  "translations": {
+    "title": "ComfyUI विज़ुअल वर्कफ़्लो इंटरफ़ेस",
+    "subtitle": "AI मॉडल विज़ुअल वर्कफ़्लो एडिटर",
+    "search": {
+      "placeholder": "वर्कफ़्लो खोजें...",
+      "clear": "खोज साफ़ करें"
+    },
+    "workflow": {
+      "title": "वर्कफ़्लो",
+      "description": "विवरण",
+      "noDescription": "कोई विवरण उपलब्ध नहीं",
+      "loading": "लोड हो रहा है...",
+      "loadFailed": "वर्कफ़्लो लोड करने में विफल",
+      "downloadWorkflow": "वर्कफ़्लो डाउनलोड करें",
+      "apply": "वर्कफ़्लो लागू करें",
+      "download": "वर्कफ़्लो डाउनलोड करें"
+    },
+    "settings": {
+      "title": "सिस्टम सेटिंग्स",
+      "server": {
+        "title": "सर्वर सेटिंग्स",
+        "ipLabel": "ComfyUI सर्वर IP पता",
+        "ipPlaceholder": "कई प्रारूपों का समर्थन करता है: localhost:8188 या http://192.168.1.100:8188 या https://example.com/ या [::1]:8188 या 2001:db8::1",
+        "testConnection": "कनेक्शन परीक्षण",
+        "supportedFormats": "IPv6 और डोमेन इनपुट का समर्थन करता है",
+        "serverAddressSupport": "सर्वर पता IPv6 और डोमेन का समर्थन करता है! सत्यापन के लिए \"कनेक्शन परीक्षण\" पर क्लिक करें, स्थायी उपयोग के लिए एक बार सेट करें।"
+      },
+      "upload": {
+        "title": "फ़ाइल अपलोड सीमाएं",
+        "imageLabel": "छवि फ़ाइल आकार सीमा (MB)",
+        "imageHint": "एक छवि फ़ाइल के लिए अधिकतम आकार MB में",
+        "videoLabel": "वीडियो फ़ाइल आकार सीमा (MB)",
+        "videoHint": "एक वीडियो फ़ाइल के लिए अधिकतम आकार MB में",
+        "audioLabel": "ऑडियो फ़ाइल आकार सीमा (MB)",
+        "audioHint": "एक ऑडियो फ़ाइल के लिए अधिकतम आकार MB में"
+      },
+      "theme": {
+        "title": "थीम सेटिंग्स",
+        "defaultLabel": "डिफ़ॉल्ट थीम",
+        "defaultHint": "पेज लोड होने पर डिफ़ॉल्ट थीम स्टाइल चुनें",
+        "currentLabel": "वर्तमान थीम",
+        "dark": "डार्क",
+        "light": "लाइट",
+        "darkTheme": "डार्क थीम",
+        "lightTheme": "लाइट थीम"
+      },
+      "language": {
+        "title": "भाषा सेटिंग्स",
+        "label": "इंटरफ़ेस भाषा",
+        "hint": "इंटरफ़ेस प्रदर्शन भाषा का चयन करें, पुनः प्रारंभ के बाद प्रभावी",
+        "auto": "सिस्टम भाषा का पालन करें"
+      },
+      "buttons": {
+        "save": "सेटिंग्स सहेजें",
+        "reset": "डिफ़ॉल्ट पर रीसेट करें",
+        "cancel": "रद्द करें"
+      }
+    },
+    "interface": {
+      "backHome": "होम पर वापस जाएं",
+      "disconnected": "डिस्कनेक्ट किया गया",
+      "connected": "कनेक्ट किया गया",
+      "paramAdjustment": "पैरामीटर समायोजन",
+      "positivePrompt": "सकारात्मक प्रॉम्प्ट",
+      "negativePrompt": "नकारात्मक प्रॉम्प्ट",
+      "positivePromptPlaceholder": "सकारात्मक प्रॉम्प्ट दर्ज करें...",
+      "negativePromptPlaceholder": "नकारात्मक प्रॉम्प्ट दर्ज करें...",
+      "randomSeed": "रैंडम सीड",
+      "enableRandomSeed": "रैंडम सीड सक्षम करें",
+      "currentSeedValue": "वर्तमान सीड मान:",
+      "generateContent": "सामग्री उत्पन्न करें",
+      "waitingGenerate": "उत्पन्न करने की प्रतीक्षा...",
+      "preparing": "तैयारी कर रहे हैं...",
+      "generationHistory": "उत्पादन इतिहास",
+      "clearHistory": "इतिहास साफ़ करें",
+      "processing": "प्रसंस्करण...",
+      "imageUpload": "छवि अपलोड",
+      "videoUpload": "वीडियो अपलोड",
+      "audioUpload": "ऑडियो अपलोड",
+      "serverAddressUpdated": "सर्वर पता अपडेट किया गया:",
+      "processing": "प्रसंस्करण",
+      "executing": "निष्पादन:",
+      "executingNode": "नोड निष्पादन:",
+      "usingCachedResult": "कैश्ड परिणाम का उपयोग",
+      "startExecutingWorkflow": "वर्कफ़्लो निष्पादन शुरू",
+      "gettingResults": "परिणाम प्राप्त कर रहे हैं...",
+      "taskCompleted": "कार्य पूर्ण, लेकिन कोई परिणाम नहीं मिला",
+      "getResultsFailed": "परिणाम प्राप्त करने में विफल",
+      "executingYourTask": "आपका कार्य निष्पादित कर रहे हैं",
+      "waitingInQueue": "कतार में प्रतीक्षा - स्थिति",
+      "position": "",
+      "checkingTaskStatus": "कार्य स्थिति जांच रहे हैं...",
+      "running": "चल रहा है",
+      "waiting": "प्रतीक्षा में",
+      "totalTasks": "कुल कार्य",
+      "tasksAhead": "आगे के कार्य",
+      "tasks": "कार्य"
+    },
+     "upload": {
+       "title": "फ़ाइल अपलोड",
+       "selectFile": "फ़ाइल चुनें",
+      "generate": "जेनरेट करें",
+      "clearHistory": "इतिहास साफ़ करें",
+      "connecting": "जुड़ रहा है...",
+      "connected": "जुड़ा हुआ",
+      "disconnected": "डिस्कनेक्ट हो गया",
+      "prompts": {
+        "positive": "सकारात्मक प्रॉम्प्ट",
+        "negative": "नकारात्मक प्रॉम्प्ट",
+        "positivePlaceholder": "सकारात्मक प्रॉम्प्ट दर्ज करें...",
+        "negativePlaceholder": "नकारात्मक प्रॉम्प्ट दर्ज करें..."
+      },
+      "seed": {
+        "random": "रैंडम सीड",
+        "current": "वर्तमान सीड"
+      },
+      "upload": {
+        "image": "छवि अपलोड करें",
+        "video": "वीडियो अपलोड करें",
+        "audio": "ऑडियो अपलोड करें",
+        "dragDrop": "फ़ाइलों को यहां खींचें और छोड़ें या अपलोड के लिए क्लिक करें",
+        "fileSelected": "फ़ाइल चयनित",
+        "uploading": "अपलोड हो रहा है...",
+        "uploaded": "अपलोड पूर्ण"
+      },
+      "progress": {
+        "generating": "जेनरेट हो रहा है...",
+        "progress": "प्रगति",
+        "executing": "निष्पादन",
+        "queue": "कतार स्थिति",
+        "complete": "जेनरेशन पूर्ण"
+      },
+      "history": {
+        "title": "इतिहास",
+        "empty": "कोई इतिहास रिकॉर्ड नहीं",
+        "loading": "इतिहास लोड हो रहा है...",
+        "preview": "पूर्वावलोकन",
+        "download": "डाउनलोड"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "कनेक्शन सफल! सर्वर सामान्य रूप से जवाब दे रहा है",
+      "connectionFailed": "कनेक्शन विफल",
+      "connectionTimeout": "कनेक्शन समय समाप्त: कृपया जांचें कि सर्वर पता सही है",
+      "settingsSaved": "सेटिंग्स सहेजी गईं",
+      "settingsReset": "सेटिंग्स डिफ़ॉल्ट पर रीसेट की गईं",
+      "serverUpdated": "सर्वर पता अपडेट किया गया",
+      "languageUpdated": "भाषा सेटिंग्स अपडेट की गईं",
+      "generateSuccess": "जेनरेशन सफल",
+      "generateFailed": "जेनरेशन विफल",
+      "uploadSuccess": "अपलोड सफल",
+      "uploadFailed": "अपलोड विफल",
+      "invalidInput": "अमान्य इनपुट",
+      "pleaseEnterValidAddress": "कृपया एक मान्य सर्वर पता दर्ज करें"
+    },
+    "errors": {
+      "networkError": "नेटवर्क त्रुटि",
+      "serverError": "सर्वर त्रुटि",
+      "timeout": "अनुरोध समय समाप्त",
+      "unknown": "अज्ञात त्रुटि",
+      "fileTooBig": "फ़ाइल बहुत बड़ी है",
+      "unsupportedFormat": "असमर्थित फ़ाइल प्रारूप"
+    }
+  }
+}

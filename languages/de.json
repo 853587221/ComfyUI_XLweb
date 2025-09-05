@@ -1,0 +1,168 @@
+{
+  "name": "Deutsch",
+  "nativeName": "Deutsch",
+  "translations": {
+    "title": "ComfyUI Visueller Workflow Interface",
+    "subtitle": "AI-Modell Visueller Workflow Editor",
+    "search": {
+      "placeholder": "Workflows suchen...",
+      "clear": "Suche löschen"
+    },
+    "workflow": {
+      "title": "Workflow",
+      "description": "Beschreibung",
+      "noDescription": "Keine Beschreibung verfügbar",
+      "loading": "Laden...",
+      "loadFailed": "Fehler beim Laden des Workflows",
+      "downloadWorkflow": "Workflow Herunterladen",
+      "apply": "Arbeitsablauf Anwenden",
+      "download": "Arbeitsablauf Herunterladen"
+    },
+    "settings": {
+      "title": "Systemeinstellungen",
+      "server": {
+        "title": "Server-Einstellungen",
+        "ipLabel": "ComfyUI Server IP-Adresse",
+        "ipPlaceholder": "Unterstützt mehrere Formate: localhost:8188 oder http://192.168.1.100:8188 oder https://example.com/ oder [::1]:8188 oder 2001:db8::1",
+        "testConnection": "Verbindung Testen",
+        "supportedFormats": "Unterstützt IPv6- und Domain-Eingabe",
+        "serverAddressSupport": "Serveradresse unterstützt IPv6 und Domains! Klicken Sie auf \"Verbindung testen\" zur Überprüfung, einmal eingestellt für dauerhafte Nutzung."
+      },
+      "upload": {
+        "title": "Datei-Upload-Limits",
+        "imageLabel": "Bild-Dateigrößenlimit (MB)",
+        "imageHint": "Maximale Größe für eine einzelne Bilddatei in MB",
+        "videoLabel": "Video-Dateigrößenlimit (MB)",
+        "videoHint": "Maximale Größe für eine einzelne Videodatei in MB",
+        "audioLabel": "Audio-Dateigrößenlimit (MB)",
+        "audioHint": "Maximale Größe für eine einzelne Audiodatei in MB"
+      },
+      "theme": {
+        "title": "Theme-Einstellungen",
+        "defaultLabel": "Standard-Theme",
+        "defaultHint": "Standard-Theme-Stil beim Laden der Seite wählen",
+        "currentLabel": "Aktuelles Theme",
+        "dark": "Dunkel",
+        "light": "Hell",
+        "darkTheme": "Dunkles Theme",
+        "lightTheme": "Helles Theme"
+      },
+      "language": {
+        "title": "Spracheinstellungen",
+        "label": "Interface-Sprache",
+        "hint": "Interface-Anzeigesprache auswählen, wirksam nach Neustart",
+        "auto": "Systemsprache Folgen"
+      },
+      "buttons": {
+        "save": "Einstellungen Speichern",
+        "reset": "Auf Standard Zurücksetzen",
+        "cancel": "Abbrechen"
+      }
+    },
+    "interface": {
+      "backHome": "Zurück zur Startseite",
+      "disconnected": "Getrennt",
+      "connected": "Verbunden",
+      "paramAdjustment": "Parameter-Anpassung",
+      "positivePrompt": "Positiver Prompt",
+      "negativePrompt": "Negativer Prompt",
+      "positivePromptPlaceholder": "Positiven Prompt eingeben...",
+      "negativePromptPlaceholder": "Negativen Prompt eingeben...",
+      "randomSeed": "Zufälliger Seed",
+      "enableRandomSeed": "Zufälligen Seed aktivieren",
+      "currentSeedValue": "Aktueller Seed-Wert:",
+      "generateContent": "Inhalt Generieren",
+      "waitingGenerate": "Warten auf Generierung...",
+      "preparing": "Vorbereitung...",
+      "generationHistory": "Generierungsverlauf",
+      "clearHistory": "Verlauf Löschen",
+      "processing": "Verarbeitung...",
+      "imageUpload": "Bild-Upload",
+      "videoUpload": "Video-Upload",
+      "audioUpload": "Audio-Upload",
+      "serverAddressUpdated": "Serveradresse aktualisiert auf:",
+      "processing": "Verarbeitung",
+      "executing": "Ausführung:",
+      "executingNode": "Knoten wird ausgeführt:",
+      "usingCachedResult": "Verwende zwischengespeichertes Ergebnis",
+      "startExecutingWorkflow": "Workflow-Ausführung beginnt",
+      "gettingResults": "Ergebnisse abrufen...",
+      "taskCompleted": "Aufgabe abgeschlossen, aber keine Ergebnisse gefunden",
+      "getResultsFailed": "Ergebnisse abrufen fehlgeschlagen",
+      "executingYourTask": "Ihre Aufgabe wird ausgeführt",
+      "waitingInQueue": "Warten in der Warteschlange - Position",
+      "position": "",
+      "checkingTaskStatus": "Aufgabenstatus prüfen...",
+      "running": "läuft",
+      "waiting": "wartend",
+      "totalTasks": "Gesamtaufgaben",
+      "tasksAhead": "Aufgaben voraus",
+      "tasks": "Aufgaben"
+    },
+     "upload": {
+       "title": "Datei-Upload",
+       "selectFile": "Datei Auswählen",
+      "generate": "Generieren",
+      "clearHistory": "Verlauf Löschen",
+      "connecting": "Verbindung...",
+      "connected": "Verbunden",
+      "disconnected": "Getrennt",
+      "prompts": {
+        "positive": "Positiver Prompt",
+        "negative": "Negativer Prompt",
+        "positivePlaceholder": "Positiven Prompt eingeben...",
+        "negativePlaceholder": "Negativen Prompt eingeben..."
+      },
+      "seed": {
+        "random": "Zufälliger Seed",
+        "current": "Aktueller Seed"
+      },
+      "upload": {
+        "image": "Bild Hochladen",
+        "video": "Video Hochladen",
+        "audio": "Audio Hochladen",
+        "dragDrop": "Dateien hier hinziehen und ablegen oder klicken zum Hochladen",
+        "fileSelected": "Datei ausgewählt",
+        "uploading": "Hochladen...",
+        "uploaded": "Upload abgeschlossen"
+      },
+      "progress": {
+        "generating": "Generierung...",
+        "progress": "Fortschritt",
+        "executing": "Ausführung",
+        "queue": "Warteschlangen-Status",
+        "complete": "Generierung Abgeschlossen"
+      },
+      "history": {
+        "title": "Verlauf",
+        "empty": "Keine Verlaufsaufzeichnungen",
+        "loading": "Verlauf laden...",
+        "preview": "Vorschau",
+        "download": "Herunterladen"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "Verbindung erfolgreich! Server antwortet normal",
+      "connectionFailed": "Verbindung fehlgeschlagen",
+      "connectionTimeout": "Verbindungs-Timeout: Bitte überprüfen Sie, ob die Server-Adresse korrekt ist",
+      "settingsSaved": "Einstellungen gespeichert",
+      "settingsReset": "Einstellungen auf Standard zurückgesetzt",
+      "serverUpdated": "Server-Adresse aktualisiert",
+      "languageUpdated": "Spracheinstellungen aktualisiert",
+      "generateSuccess": "Generierung erfolgreich",
+      "generateFailed": "Generierung fehlgeschlagen",
+      "uploadSuccess": "Upload erfolgreich",
+      "uploadFailed": "Upload fehlgeschlagen",
+      "invalidInput": "Ungültige Eingabe",
+      "pleaseEnterValidAddress": "Bitte geben Sie eine gültige Server-Adresse ein"
+    },
+    "errors": {
+      "networkError": "Netzwerk-Fehler",
+      "serverError": "Server-Fehler",
+      "timeout": "Anfrage-Timeout",
+      "unknown": "Unbekannter Fehler",
+      "fileTooBig": "Datei zu groß",
+      "unsupportedFormat": "Nicht unterstütztes Dateiformat"
+    }
+  }
+}

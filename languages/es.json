@@ -1,0 +1,168 @@
+{
+  "name": "Español",
+  "nativeName": "Español",
+  "translations": {
+    "title": "Interfaz de Flujo de Trabajo Visual ComfyUI",
+    "subtitle": "Editor de Flujo de Trabajo Visual para Modelos IA",
+    "search": {
+      "placeholder": "Buscar flujos de trabajo...",
+      "clear": "Limpiar búsqueda"
+    },
+    "workflow": {
+      "title": "Flujo de Trabajo",
+      "description": "Descripción",
+      "noDescription": "Sin descripción disponible",
+      "loading": "Cargando...",
+      "loadFailed": "Error al cargar el flujo de trabajo",
+      "downloadWorkflow": "Descargar Flujo de Trabajo",
+      "apply": "Aplicar Flujo de Trabajo",
+      "download": "Descargar Flujo de Trabajo"
+    },
+    "settings": {
+      "title": "Configuración del Sistema",
+      "server": {
+        "title": "Configuración del Servidor",
+        "ipLabel": "Dirección IP del Servidor ComfyUI",
+        "ipPlaceholder": "Soporta múltiples formatos: localhost:8188 o http://192.168.1.100:8188 o https://example.com/ o [::1]:8188 o 2001:db8::1",
+        "testConnection": "Probar Conexión",
+        "supportedFormats": "Admite entrada de IPv6 y dominio",
+        "serverAddressSupport": "¡La dirección del servidor admite IPv6 y dominios! Haga clic en \"Probar conexión\" para verificar, configure una vez para uso permanente."
+      },
+      "upload": {
+        "title": "Límites de Subida de Archivos",
+        "imageLabel": "Límite de Tamaño de Archivo de Imagen (MB)",
+        "imageHint": "Tamaño máximo para un archivo de imagen único en MB",
+        "videoLabel": "Límite de Tamaño de Archivo de Vídeo (MB)",
+        "videoHint": "Tamaño máximo para un archivo de vídeo único en MB",
+        "audioLabel": "Límite de Tamaño de Archivo de Audio (MB)",
+        "audioHint": "Tamaño máximo para un archivo de audio único en MB"
+      },
+      "theme": {
+        "title": "Configuración de Tema",
+        "defaultLabel": "Tema Predeterminado",
+        "defaultHint": "Elegir el estilo de tema predeterminado al cargar la página",
+        "currentLabel": "Tema Actual",
+        "dark": "Oscuro",
+        "light": "Claro",
+        "darkTheme": "Tema Oscuro",
+        "lightTheme": "Tema Claro"
+      },
+      "language": {
+        "title": "Configuración de Idioma",
+        "label": "Idioma de la Interfaz",
+        "hint": "Seleccionar idioma de visualización de la interfaz, surte efecto después del reinicio",
+        "auto": "Seguir Idioma del Sistema"
+      },
+      "buttons": {
+        "save": "Guardar Configuración",
+        "reset": "Restablecer Predeterminado",
+        "cancel": "Cancelar"
+      }
+    },
+    "interface": {
+      "backHome": "Volver al Inicio",
+      "disconnected": "Desconectado",
+      "connected": "Conectado",
+      "paramAdjustment": "Ajuste de Parámetros",
+      "positivePrompt": "Prompt Positivo",
+      "negativePrompt": "Prompt Negativo",
+      "positivePromptPlaceholder": "Ingrese prompt positivo...",
+      "negativePromptPlaceholder": "Ingrese prompt negativo...",
+      "randomSeed": "Semilla Aleatoria",
+      "enableRandomSeed": "Habilitar Semilla Aleatoria",
+      "currentSeedValue": "Valor de Semilla Actual:",
+      "generateContent": "Generar Contenido",
+      "waitingGenerate": "Esperando generar...",
+      "preparing": "Preparando...",
+      "generationHistory": "Historial de Generación",
+      "clearHistory": "Limpiar Historial",
+      "processing": "Procesando...",
+      "imageUpload": "Subida de Imagen",
+      "videoUpload": "Subida de Video",
+      "audioUpload": "Subida de Audio",
+      "serverAddressUpdated": "Dirección del servidor actualizada a:",
+      "processing": "Procesando",
+      "executing": "Ejecutando:",
+      "executingNode": "Ejecutando nodo:",
+      "usingCachedResult": "Usando resultado en caché",
+      "startExecutingWorkflow": "Iniciando ejecución del flujo de trabajo",
+      "gettingResults": "Obteniendo resultados...",
+      "taskCompleted": "Tarea completada pero no se encontraron resultados",
+      "getResultsFailed": "Error al obtener resultados",
+      "executingYourTask": "Ejecutando su tarea",
+      "waitingInQueue": "Esperando en cola - Posición",
+      "position": "",
+      "checkingTaskStatus": "Verificando estado de la tarea...",
+      "running": "ejecutándose",
+      "waiting": "esperando",
+      "totalTasks": "tareas totales",
+      "tasksAhead": "tareas por delante",
+      "tasks": "tareas"
+    },
+     "upload": {
+       "title": "Subida de Archivo",
+       "selectFile": "Seleccionar Archivo",
+      "generate": "Generar",
+      "clearHistory": "Limpiar Historial",
+      "connecting": "Conectando...",
+      "connected": "Conectado",
+      "disconnected": "Desconectado",
+      "prompts": {
+        "positive": "Prompt Positivo",
+        "negative": "Prompt Negativo",
+        "positivePlaceholder": "Introduzca prompt positivo...",
+        "negativePlaceholder": "Introduzca prompt negativo..."
+      },
+      "seed": {
+        "random": "Semilla Aleatoria",
+        "current": "Semilla Actual"
+      },
+      "upload": {
+        "image": "Subir Imagen",
+        "video": "Subir Vídeo",
+        "audio": "Subir Audio",
+        "dragDrop": "Arrastre y suelte archivos aquí o haga clic para subir",
+        "fileSelected": "Archivo seleccionado",
+        "uploading": "Subiendo...",
+        "uploaded": "Subida completa"
+      },
+      "progress": {
+        "generating": "Generando...",
+        "progress": "Progreso",
+        "executing": "Ejecutando",
+        "queue": "Estado de Cola",
+        "complete": "Generación Completa"
+      },
+      "history": {
+        "title": "Historial",
+        "empty": "No hay registros de historial",
+        "loading": "Cargando historial...",
+        "preview": "Vista Previa",
+        "download": "Descargar"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "¡Conexión exitosa! El servidor responde normalmente",
+      "connectionFailed": "Conexión fallida",
+      "connectionTimeout": "Tiempo de conexión agotado: Por favor verifique si la dirección del servidor es correcta",
+      "settingsSaved": "Configuración guardada",
+      "settingsReset": "Configuración restablecida a predeterminada",
+      "serverUpdated": "Dirección del servidor actualizada",
+      "languageUpdated": "Configuración de idioma actualizada",
+      "generateSuccess": "Generación exitosa",
+      "generateFailed": "Generación fallida",
+      "uploadSuccess": "Subida exitosa",
+      "uploadFailed": "Subida fallida",
+      "invalidInput": "Entrada inválida",
+      "pleaseEnterValidAddress": "Por favor introduzca una dirección de servidor válida"
+    },
+    "errors": {
+      "networkError": "Error de red",
+      "serverError": "Error del servidor",
+      "timeout": "Tiempo de solicitud agotado",
+      "unknown": "Error desconocido",
+      "fileTooBig": "Archivo demasiado grande",
+      "unsupportedFormat": "Formato de archivo no soportado"
+    }
+  }
+}

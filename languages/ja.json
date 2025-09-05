@@ -1,0 +1,169 @@
+{
+  "name": "日本語",
+  "nativeName": "日本語",
+  "translations": {
+    "title": "ComfyUI_XLWEB",
+    "subtitle": "AIモデルビジュアルワークフローエディター",
+    "pageDescription": "無限のAIワークフローを探索",
+    "search": {
+      "placeholder": "ワークフローを検索...",
+      "clear": "検索をクリア"
+    },
+    "workflow": {
+      "title": "ワークフロー",
+      "description": "説明",
+      "noDescription": "説明がありません",
+      "loading": "読み込み中...",
+      "loadFailed": "ワークフローの読み込みに失敗しました",
+      "downloadWorkflow": "ワークフローをダウンロード",
+      "apply": "ワークフローを適用",
+      "download": "ワークフローをダウンロード"
+    },
+    "settings": {
+      "title": "システム設定",
+      "server": {
+        "title": "サーバー設定",
+        "ipLabel": "ComfyUI サーバー IP アドレス",
+        "ipPlaceholder": "複数の形式をサポート: localhost:8188 または http://192.168.1.100:8188 または https://example.com/ または [::1]:8188 または 2001:db8::1",
+        "testConnection": "接続テスト",
+        "supportedFormats": "IPv6とドメイン入力をサポート",
+        "serverAddressSupport": "サーバーアドレスはIPv6とドメインをサポート！\"接続テスト\"をクリックして検証、一度設定すれば永続的に有効。"
+      },
+      "upload": {
+        "title": "ファイルアップロード制限",
+        "imageLabel": "画像ファイルサイズ制限 (MB)",
+        "imageHint": "単一画像ファイルの最大サイズ（MB単位）",
+        "videoLabel": "動画ファイルサイズ制限 (MB)",
+        "videoHint": "単一動画ファイルの最大サイズ（MB単位）",
+        "audioLabel": "音声ファイルサイズ制限 (MB)",
+        "audioHint": "単一音声ファイルの最大サイズ（MB単位）"
+      },
+      "theme": {
+        "title": "テーマ設定",
+        "defaultLabel": "デフォルトテーマ",
+        "defaultHint": "ページ読み込み時のデフォルトテーマスタイルを選択",
+        "currentLabel": "現在のテーマ",
+        "dark": "ダーク",
+        "light": "ライト",
+        "darkTheme": "ダークテーマ",
+        "lightTheme": "ライトテーマ"
+      },
+      "language": {
+        "title": "言語設定",
+        "label": "インターフェース言語",
+        "hint": "インターフェース表示言語を選択、再起動後に有効",
+        "auto": "システム言語に従う"
+      },
+      "buttons": {
+        "save": "設定を保存",
+        "reset": "デフォルトにリセット",
+        "cancel": "キャンセル"
+      }
+    },
+    "interface": {
+      "backHome": "ホームに戻る",
+      "disconnected": "未接続",
+      "connected": "接続済み",
+      "paramAdjustment": "パラメータ調整",
+      "positivePrompt": "ポジティブプロンプト",
+      "negativePrompt": "ネガティブプロンプト",
+      "positivePromptPlaceholder": "ポジティブプロンプトを入力...",
+      "negativePromptPlaceholder": "ネガティブプロンプトを入力...",
+      "randomSeed": "ランダムシード",
+      "enableRandomSeed": "ランダムシードを有効にする",
+      "currentSeedValue": "現在のシード値:",
+      "generateContent": "コンテンツを生成",
+      "waitingGenerate": "生成待ち...",
+      "preparing": "準備中...",
+      "generationHistory": "生成履歴",
+      "clearHistory": "履歴をクリア",
+      "processing": "処理中...",
+      "imageUpload": "画像アップロード",
+      "videoUpload": "動画アップロード",
+      "audioUpload": "音声アップロード",
+      "serverAddressUpdated": "サーバーアドレスが更新されました:",
+      "processing": "処理中",
+      "executing": "実行中:",
+      "executingNode": "ノード実行中:",
+      "usingCachedResult": "キャッシュ結果を使用",
+      "startExecutingWorkflow": "ワークフロー実行開始",
+      "gettingResults": "結果を取得中...",
+      "taskCompleted": "タスク完了、結果が見つかりません",
+      "getResultsFailed": "結果の取得に失敗",
+      "executingYourTask": "あなたのタスクを実行中",
+      "waitingInQueue": "キューで待機中 - ",
+      "position": "番目",
+      "checkingTaskStatus": "タスクステータス確認中...",
+      "running": "実行中",
+      "waiting": "待機中",
+      "totalTasks": "総タスク数",
+      "tasksAhead": "前に",
+      "tasks": "個のタスク"
+    },
+     "upload": {
+       "title": "ファイルアップロード",
+       "selectFile": "ファイルを選択",
+      "generate": "生成",
+      "clearHistory": "履歴をクリア",
+      "connecting": "接続中...",
+      "connected": "接続済み",
+      "disconnected": "接続が切断されました",
+      "prompts": {
+        "positive": "ポジティブプロンプト",
+        "negative": "ネガティブプロンプト",
+        "positivePlaceholder": "ポジティブプロンプトを入力...",
+        "negativePlaceholder": "ネガティブプロンプトを入力..."
+      },
+      "seed": {
+        "random": "ランダムシード",
+        "current": "現在のシード"
+      },
+      "upload": {
+        "image": "画像をアップロード",
+        "video": "動画をアップロード",
+        "audio": "音声をアップロード",
+        "dragDrop": "ファイルをここにドラッグ＆ドロップまたはクリックしてアップロード",
+        "fileSelected": "ファイルが選択されました",
+        "uploading": "アップロード中...",
+        "uploaded": "アップロード完了"
+      },
+      "progress": {
+        "generating": "生成中...",
+        "progress": "進行状況",
+        "executing": "実行中",
+        "queue": "キューステータス",
+        "complete": "生成完了"
+      },
+      "history": {
+        "title": "履歴",
+        "empty": "履歴記録がありません",
+        "loading": "履歴を読み込み中...",
+        "preview": "プレビュー",
+        "download": "ダウンロード"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "接続成功！サーバーが正常に応答しています",
+      "connectionFailed": "接続に失敗しました",
+      "connectionTimeout": "接続タイムアウト：サーバーアドレスが正しいか確認してください",
+      "settingsSaved": "設定が保存されました",
+      "settingsReset": "設定がデフォルトにリセットされました",
+      "serverUpdated": "サーバーアドレスが更新されました",
+      "languageUpdated": "言語設定が更新されました",
+      "generateSuccess": "生成に成功しました",
+      "generateFailed": "生成に失敗しました",
+      "uploadSuccess": "アップロードに成功しました",
+      "uploadFailed": "アップロードに失敗しました",
+      "invalidInput": "無効な入力",
+      "pleaseEnterValidAddress": "有効なサーバーアドレスを入力してください"
+    },
+    "errors": {
+      "networkError": "ネットワークエラー",
+      "serverError": "サーバーエラー",
+      "timeout": "リクエストタイムアウト",
+      "unknown": "不明なエラー",
+      "fileTooBig": "ファイルが大きすぎます",
+      "unsupportedFormat": "サポートされていないファイル形式"
+    }
+  }
+}

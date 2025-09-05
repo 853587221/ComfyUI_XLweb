@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言系统测试</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .language-selector {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .language-selector select {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #2a2a3e;
+            color: white;
+            font-size: 16px;
+            min-width: 200px;
+        }
+        .test-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+        .test-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 4px solid #6366f1;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .key {
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .value {
+            margin-left: 10px;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #6366f1;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #5855eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ComfyUI_XLWEB - 语言系统测试</h1>
+            <p data-i18n="subtitle">测试多语言文件加载和切换功能</p>
+        </div>
+        
+        <div class="language-selector">
+            <label data-i18n="selectLanguage">选择语言：</label>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="zh-CN">简体中文</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ar">العربية</option>
+                <option value="ru">Русский</option>
+                <option value="hi">हिन्दी</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        
+        <div class="test-content">
+            <h3>基本翻译测试</h3>
+            <div class="test-item">
+                <span class="key">标题:</span>
+                <span class="value">ComfyUI_XLWEB (固定不变)</span>
+            </div>
+            <div class="test-item">
+                <span class="key">设置:</span>
+                <span class="value" data-i18n="settings.title">系统设置</span>
+            </div>
+            <div class="test-item">
+                <span class="key">服务器设置:</span>
+                <span class="value" data-i18n="settings.server.title">服务器设置</span>
+            </div>
+            <div class="test-item">
+                <span class="key">消息:</span>
+                <span class="value" data-i18n="messages.settingsSaved">设置已保存</span>
+            </div>
+            <div class="test-item">
+                <span class="key">界面语言:</span>
+                <span class="value" data-i18n="settings.language.label">界面语言</span>
+            </div>
+        </div>
+        
+        <div class="test-content">
+            <h3>控制按钮</h3>
+            <button class="btn" onclick="testLanguageLoading()">
+                <i class="fas fa-play"></i> 测试语言加载
+            </button>
+            <button class="btn" onclick="showLanguageInfo()">
+                <i class="fas fa-info-circle"></i> 显示语言信息
+            </button>
+            <button class="btn" onclick="clearStatus()">
+                <i class="fas fa-eraser"></i> 清除状态
+            </button>
+        </div>
+        
+        <div class="status" id="status">
+            <h4>状态信息</h4>
+            <p>语言系统初始化完成，可以开始测试。</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // 语言切换函数
+        async function changeLanguage() {
+            const select = document.getElementById('language-select');
+            const selectedLanguage = select.value;
+            
+            updateStatus(`正在切换到: ${selectedLanguage}`, false);
+            
+            try {
+                if (window.languageManager) {
+                    await window.languageManager.setLanguage(selectedLanguage);
+                    updateStatus(`语言已成功切换到: ${selectedLanguage} (${window.languageManager.getLanguageName(selectedLanguage)})`, false);
+                } else {
+                    updateStatus('错误: 语言管理器未初始化', true);
+                }
+            } catch (error) {
+                updateStatus(`语言切换失败: ${error.message}`, true);
+            }
+        }
+        
+        // 测试语言加载
+        async function testLanguageLoading() {
+            updateStatus('开始测试所有语言文件加载...', false);
+            
+            const languages = ['zh-CN', 'zh-TW', 'en', 'ja', 'ko', 'fr', 'de', 'ar', 'ru', 'hi', 'es'];
+            let successCount = 0;
+            let errorCount = 0;
+            
+            for (const lang of languages) {
+                try {
+                    if (window.languageManager) {
+                        await window.languageManager.loadLanguage(lang);
+                        console.log(`✅ ${lang} 加载成功`);
+                        successCount++;
+                    }
+                } catch (error) {
+                    console.error(`❌ ${lang} 加载失败:`, error);
+                    errorCount++;
+                }
+            }
+            
+            updateStatus(`测试完成: ${successCount} 个成功, ${errorCount} 个失败`, errorCount > 0);
+        }
+        
+        // 显示语言信息
+        function showLanguageInfo() {
+            if (window.languageManager) {
+                const currentLang = window.languageManager.getCurrentLanguage();
+                const currentName = window.languageManager.getLanguageName(currentLang);
+                const supportedLangs = window.languageManager.getSupportedLanguages();
+                
+                const info = `
+                    当前语言: ${currentLang} (${currentName})
+                    支持的语言: ${supportedLangs.join(', ')}
+                    已加载的语言: ${Array.from(window.languageManager.loadedLanguages).join(', ')}
+                `;
+                
+                updateStatus(info, false);
+            } else {
+                updateStatus('错误: 语言管理器未初始化', true);
+            }
+        }
+        
+        // 更新状态
+        function updateStatus(message, isError) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = isError ? 'status error' : 'status';
+            statusDiv.innerHTML = `
+                <h4>${isError ? '错误' : '状态信息'}</h4>
+                <p>${message.replace(/\n/g, '<br>')}</p>
+            `;
+        }
+        
+        // 清除状态
+        function clearStatus() {
+            updateStatus('状态已清除', false);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待app.js初始化完成
+            setTimeout(() => {
+                if (window.languageManager) {
+                    updateStatus('语言系统已初始化，当前语言: ' + window.languageManager.getCurrentLanguage(), false);
+                } else {
+                    updateStatus('警告: 语言管理器未找到，可能需要检查app.js加载', true);
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

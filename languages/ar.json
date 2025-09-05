@@ -1,0 +1,168 @@
+{
+  "name": "العربية",
+  "nativeName": "العربية",
+  "translations": {
+    "title": "واجهة سير العمل المرئي ComfyUI",
+    "subtitle": "محرر سير العمل المرئي لنماذج الذكاء الاصطناعي",
+    "search": {
+      "placeholder": "البحث في سير العمل...",
+      "clear": "مسح البحث"
+    },
+    "workflow": {
+      "title": "سير العمل",
+      "description": "الوصف",
+      "noDescription": "لا يوجد وصف متاح",
+      "loading": "جاري التحميل...",
+      "loadFailed": "فشل في تحميل سير العمل",
+      "downloadWorkflow": "تحميل سير العمل",
+      "apply": "تطبيق سير العمل",
+      "download": "تحميل سير العمل"
+    },
+    "settings": {
+      "title": "إعدادات النظام",
+      "server": {
+        "title": "إعدادات الخادم",
+        "ipLabel": "عنوان IP لخادم ComfyUI",
+        "ipPlaceholder": "يدعم تنسيقات متعددة: localhost:8188 أو http://192.168.1.100:8188 أو https://example.com/ أو [::1]:8188 أو 2001:db8::1",
+        "testConnection": "اختبار الاتصال",
+        "supportedFormats": "يدعم إدخال IPv6 والنطاق",
+        "serverAddressSupport": "عنوان الخادم يدعم IPv6 والنطاقات! انقر على \"اختبار الاتصال\" للتحقق، اضبط مرة واحدة للاستخدام الدائم."
+      },
+      "upload": {
+        "title": "حدود رفع الملفات",
+        "imageLabel": "حد حجم ملف الصورة (ميجابايت)",
+        "imageHint": "الحد الأقصى لحجم ملف صورة واحد بالميجابايت",
+        "videoLabel": "حد حجم ملف الفيديو (ميجابايت)",
+        "videoHint": "الحد الأقصى لحجم ملف فيديو واحد بالميجابايت",
+        "audioLabel": "حد حجم ملف الصوت (ميجابايت)",
+        "audioHint": "الحد الأقصى لحجم ملف صوت واحد بالميجابايت"
+      },
+      "theme": {
+        "title": "إعدادات المظهر",
+        "defaultLabel": "المظهر الافتراضي",
+        "defaultHint": "اختر نمط المظهر الافتراضي عند تحميل الصفحة",
+        "currentLabel": "المظهر الحالي",
+        "dark": "داكن",
+        "light": "فاتح",
+        "darkTheme": "المظهر الداكن",
+        "lightTheme": "المظهر الفاتح"
+      },
+      "language": {
+        "title": "إعدادات اللغة",
+        "label": "لغة الواجهة",
+        "hint": "اختر لغة عرض الواجهة، يصبح ساري المفعول بعد إعادة التشغيل",
+        "auto": "اتباع لغة النظام"
+      },
+      "buttons": {
+        "save": "حفظ الإعدادات",
+        "reset": "إعادة تعيين افتراضي",
+        "cancel": "إلغاء"
+      }
+    },
+    "interface": {
+      "backHome": "العودة للرئيسية",
+      "disconnected": "غير متصل",
+      "connected": "متصل",
+      "paramAdjustment": "تعديل المعاملات",
+      "positivePrompt": "الموجه الإيجابي",
+      "negativePrompt": "الموجه السلبي",
+      "positivePromptPlaceholder": "أدخل الموجه الإيجابي...",
+      "negativePromptPlaceholder": "أدخل الموجه السلبي...",
+      "randomSeed": "البذرة العشوائية",
+      "enableRandomSeed": "تفعيل البذرة العشوائية",
+      "currentSeedValue": "قيمة البذرة الحالية:",
+      "generateContent": "إنتاج المحتوى",
+      "waitingGenerate": "في انتظار الإنتاج...",
+      "preparing": "جاري التحضير...",
+      "generationHistory": "تاريخ الإنتاج",
+      "clearHistory": "مسح التاريخ",
+      "processing": "جاري المعالجة...",
+      "imageUpload": "رفع الصورة",
+      "videoUpload": "رفع الفيديو",
+      "audioUpload": "رفع الصوت",
+      "serverAddressUpdated": "تم تحديث عنوان الخادم إلى:",
+      "processing": "جاري المعالجة",
+      "executing": "جاري التنفيذ:",
+      "executingNode": "جاري تنفيذ العقدة:",
+      "usingCachedResult": "استخدام النتيجة المخزنة مؤقتاً",
+      "startExecutingWorkflow": "بدء تنفيذ سير العمل",
+      "gettingResults": "جاري الحصول على النتائج...",
+      "taskCompleted": "اكتملت المهمة ولكن لم يتم العثور على نتائج",
+      "getResultsFailed": "فشل في الحصول على النتائج",
+      "executingYourTask": "جاري تنفيذ مهمتك",
+      "waitingInQueue": "في انتظار الدور - الموضع",
+      "position": "",
+      "checkingTaskStatus": "جاري فحص حالة المهمة...",
+      "running": "قيد التشغيل",
+      "waiting": "في الانتظار",
+      "totalTasks": "إجمالي المهام",
+      "tasksAhead": "مهام متقدمة",
+      "tasks": "مهام"
+    },
+     "upload": {
+       "title": "رفع الملف",
+       "selectFile": "اختيار الملف",
+      "generate": "إنتاج",
+      "clearHistory": "مسح التاريخ",
+      "connecting": "جاري الاتصال...",
+      "connected": "متصل",
+      "disconnected": "منقطع",
+      "prompts": {
+        "positive": "الموجه الإيجابي",
+        "negative": "الموجه السلبي",
+        "positivePlaceholder": "أدخل الموجه الإيجابي...",
+        "negativePlaceholder": "أدخل الموجه السلبي..."
+      },
+      "seed": {
+        "random": "بذرة عشوائية",
+        "current": "البذرة الحالية"
+      },
+      "upload": {
+        "image": "رفع صورة",
+        "video": "رفع فيديو",
+        "audio": "رفع صوت",
+        "dragDrop": "اسحب وأفلت الملفات هنا أو انقر للرفع",
+        "fileSelected": "تم اختيار الملف",
+        "uploading": "جاري الرفع...",
+        "uploaded": "اكتمل الرفع"
+      },
+      "progress": {
+        "generating": "جاري الإنتاج...",
+        "progress": "التقدم",
+        "executing": "جاري التنفيذ",
+        "queue": "حالة الطابور",
+        "complete": "اكتمل الإنتاج"
+      },
+      "history": {
+        "title": "التاريخ",
+        "empty": "لا توجد سجلات تاريخ",
+        "loading": "جاري تحميل التاريخ...",
+        "preview": "معاينة",
+        "download": "تحميل"
+      }
+    },
+    "messages": {
+      "connectionSuccess": "نجح الاتصال! الخادم يستجيب بشكل طبيعي",
+      "connectionFailed": "فشل الاتصال",
+      "connectionTimeout": "انتهت مهلة الاتصال: يرجى التحقق من صحة عنوان الخادم",
+      "settingsSaved": "تم حفظ الإعدادات",
+      "settingsReset": "تم إعادة تعيين الإعدادات للافتراضي",
+      "serverUpdated": "تم تحديث عنوان الخادم",
+      "languageUpdated": "تم تحديث إعدادات اللغة",
+      "generateSuccess": "نجح الإنتاج",
+      "generateFailed": "فشل الإنتاج",
+      "uploadSuccess": "نجح الرفع",
+      "uploadFailed": "فشل الرفع",
+      "invalidInput": "إدخال غير صالح",
+      "pleaseEnterValidAddress": "يرجى إدخال عنوان خادم صالح"
+    },
+    "errors": {
+      "networkError": "خطأ في الشبكة",
+      "serverError": "خطأ في الخادم",
+      "timeout": "انتهت مهلة الطلب",
+      "unknown": "خطأ غير معروف",
+      "fileTooBig": "الملف كبير جداً",
+      "unsupportedFormat": "تنسيق ملف غير مدعوم"
+    }
+  }
+}
