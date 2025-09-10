@@ -120,15 +120,6 @@ ComfyUI_xlweb/
 
 MIT 许可证 - 欢迎用于你的项目并进行修改。
 
-## 支持
-
-如有问题和疑问，请查看：
-- ComfyUI文档
-- 插件GitHub问题页面  
-- 社区论坛
-- 微信群
-![功能展示](VX.png)
-
 -----------------------------------------------------------------------------------------------------------------
 
 # ComfyUI XLWeb Plugin (English)
@@ -253,13 +244,5 @@ This plugin uses modern web technologies:
 
 MIT License - Feel free to use in your projects and modify.
 
-## Support
-
-For questions and issues, please check:
-- ComfyUI documentation
-- Plugin GitHub issues page
-- Community forums
-- WeChat Group
-![Feature Demo](VX.png)
 
 ---
